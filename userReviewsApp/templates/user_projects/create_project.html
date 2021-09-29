@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block nav_content %} 
+{% include 'nav.html' %}
+{% endblock %}
+{% block content %}
+
+    <div class="card px-5">
+        <div class="card-header">
+         {% if img_obj %}
+         <div class="alert alert-success" role="alert">
+            <h3>Successfully uploaded Your Photo !!! </h3>
+        </div>
+       {% endif %}
+        </div>
+        <div class="card-body">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <form method="post" enctype="multipart/form-data">
+                    <div>
+                    {% csrf_token %}
+                     {{ form.as_p }}
+                    <button type="submit" class="btn btn-success">create</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+        </div>
+  </div>
+  {%endblock%}
