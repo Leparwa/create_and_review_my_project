@@ -1,22 +1,16 @@
 
-  <div id="flipkart-navbar">
+  <nav id="flipkart-navbar" class="navbar fixed-top">
     <div class="container">
         <div class="row row1">
             <ul class="largenav pull-right">
-                <li class="upper-links"><a class="links" href="http://clashhacks.in/">Home</a></li>
+                <li class="upper-links"><a class="links" href="/main">Home</a></li>
                 <li class="upper-links"><a class="links" href="https://campusbox.org/">Projects</a></li>
-                <li class="upper-links">
-                    <a class="links" href="http://clashhacks.in/">
-                        <svg class="" width="16px" height="12px" style="overflow: visible;">
-                            <path d="M8.037 17.546c1.487 0 2.417-.93 2.417-2.417H5.62c0 1.486.93 2.415 2.417 2.415m5.315-6.463v-2.97h-.005c-.044-3.266-1.67-5.46-4.337-5.98v-.81C9.01.622 8.436.05 7.735.05 7.033.05 6.46.624 6.46 1.325v.808c-2.667.52-4.294 2.716-4.338 5.98h-.005v2.972l-1.843 1.42v1.376h14.92v-1.375l-1.842-1.42z" fill="#fff"></path>
-                        </svg>
-                    </a>
-                </li>
+               
                 <li class="upper-links dropdown"><a class="links" href="http://clashhacks.in/">Account</a>
                     <ul class="dropdown-menu">
                         <li class="profile-li"><a class="profile-links" href="{% url 'project' %}">create project</a></li>
-                        <li class="profile-li"><a class="profile-links" href="http://hacksociety.tech/">Profile</a></li>
-                        <li class="profile-li"><a class="profile-links" href="http://clashhacks.in/">Logout</a></li>
+                        <li class="profile-li"><a class="profile-links" href="{% url 'register' %}">sign up</a></li>
+                        <li class="profile-li"><a class="profile-links" href="{% url 'login' %}">Login</a></li>
 
                     </ul>
                 </li>
@@ -27,7 +21,7 @@
                 <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ PRORATER</span></h2>
                 <h1 style="margin:0px;"><span class="largenav">PRORATER</span></h1>
             </div>
-            <div class="flipkart-navbar-search smallsearch col-sm-7 col-xs-11">
+            <!-- <div class="flipkart-navbar-search smallsearch col-sm-7 col-xs-11">
                 <div class="row">
                     <input class="flipkart-navbar-input col-xs-11" type="" placeholder="Search for Projects" name="">
                     <button class="flipkart-navbar-button col-xs-1">
@@ -36,22 +30,22 @@
                         </svg>
                     </button>
                 </div>
-            </div>
-            <div class="cart largenav col-sm-2">
+            </div> -->
+            <!-- <div class="cart largenav col-sm-2">
                 <a class="cart-button">
                     <svg class="cart-svg " width="16 " height="16 " viewBox="0 0 16 16 ">
                         <path d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86 " fill="#fff "></path>
                     </svg> reviews
                     <span class="item-number ">0</span>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
-</div>
-<div id="mySidenav" class="sidenav">
-    <div class="container" style="background-color: #2874f0; padding-top: 10px;">
+</nav>
+<div id="mySidenav" class="sidenav mt-5">
+    <div class="container" style="background-color: #b9bcc0; padding-top: 10px;">
         <span class="sidenav-heading">Home</span>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: cornsilk;">X</a>
     </div>
     <a href="http://clashhacks.in/">Home</a>
     <a href="http://clashhacks.in/">Account</a>

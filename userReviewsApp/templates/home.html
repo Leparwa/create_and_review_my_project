@@ -10,5 +10,43 @@
 {% block content %} 
 
 
+<div class="container my-4 py-5">
+    <div class="row">
+            {% for project in projects %}
+            <div class="col-md-4 col-lg-4 px-5 py-4" >
+                <div class="card shadow" style="background-color: rgb(195, 217, 236);">
+                 
+                    <div class="card-body border-top">
+                        <h4 class="text-uppercase px-3">
+                            {{ project.title }}
+                        </h4>
+                        <div class="p-4">
+                            <img src="https://uploads.sitepoint.com/wp-content/uploads/2017/06/1539826260font-awsome-wordpress.jpg" alt="" width="100%">
+                        </div>
+                        <p class="px-3" style="font-size: small;">
+                            <strong>{{ project.description|truncatechars:120 }}</strong>
+                        </p>
+                      
+                        <ul class="list-style-none  d-flex flex-item text-center" style="list-style: none;">
+                            <li class="col px-2">
+                                <button type="button" class="btn btn-primary pull-left" style="font-size: small;">
+                                    Reviews <span class="badge bg-white text-primary">4</span>
+                                  </button>                       
+                                </li>
+                                <li class="col px-2">
+                                    <strong>Owner: Kevin Leparwa</strong>
+                                </li>
+                            <li class="col px-2">
+                                <button class="btn btn-outline-success text-primary btn-sm" style="font-size: small;">comment</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    
+    </div>
+</div>
 
 {% endblock %}
