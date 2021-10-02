@@ -5,7 +5,6 @@ from .serializer import ProjectSerializer
 # from userReviewsApp import serializer
 from django.core import serializers
 
-api_base_url='https://prorater-api.herokuapp.com/'
 
 def register_user(data):
     response=requests.post('https://prorater-api.herokuapp.com/user/register',json=data) 
@@ -27,11 +26,8 @@ def create_use_project(data):
     response=requests.post('https://prorater-api.herokuapp.com/project/',data) 
     return response
 def get_user_projects():
-    all_projects=requests.get('https://prorater-api.herokuapp.com/project')
+    all_projects=requests.get('https://prorater-api.herokuapp.com/project/')
     user_data = all_projects.json()
     return user_data
-def get_all_projects():
-    response=requests.get('https://prorater-api.herokuapp.com/user/projects') 
-    data =response.json()
-    return data
+
    

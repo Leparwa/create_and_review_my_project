@@ -1,9 +1,7 @@
 import json
 from django.contrib import messages
 from django.contrib.messages.api import error
-from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from .forms import SignUpForm, ProjectsForm, LoginForm
 from .services import register_user, get_user_projects, create_use_project, login_user
@@ -11,8 +9,6 @@ from django.core.exceptions import BadRequest, ValidationError
 def home(request):
     projects= get_user_projects()
     return render(request, 'home.html', {'projects': list(projects) })
-
-
 def register(request):
     if request.method == "POST":
         form = SignUpForm(data=request.POST)
