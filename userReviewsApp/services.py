@@ -16,7 +16,7 @@ def login_user(data):
     print(response.json())
     return response.json()
 def get_user(data):
-    response=requests.get('https://api-prorater.herokuapp.comuser') 
+    response=requests.get('https://api-prorater.herokuapp.com/user') 
     print(response)
     return response
 def get_user_profile(data):
