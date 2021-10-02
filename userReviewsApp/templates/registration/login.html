@@ -8,6 +8,12 @@
           <div class="card my-5 py-4" style="border-radius: 50px; background-color: rgb(157, 113, 199, 0.2);">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Login</h2>
+              {% for message in messages %}
+              <div class="alert alert-danger">
+                  <a class="close" href="#" data-dismiss="alert">×</a>
+                     {{ message }}
+              </div>
+                {% endfor %}
               <form method="POST">
                 {% csrf_token %}
                 {% bootstrap_form form %}

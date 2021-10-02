@@ -12,7 +12,7 @@ def register_user(data):
     print(response.json)
     return response.json()
 def login_user(data):
-    response=requests.post('http://127.0.0.1:4000/user/login',json=data) 
+    response=requests.post('http://127.0.0.1:4000/user/login', json=data) 
     print(response.json())
     return response.json()
 def get_user(data):
@@ -23,8 +23,8 @@ def get_user_profile(data):
     response=requests.get('http://127.0.0.1:4000/user/profile',json=data) 
     print(response.json)
 def create_use_project(data):
-    response=requests.post('http://127.0.0.1:4000/project',json=data) 
-    print(response.json())
+    print(data)
+    response=requests.post('http://127.0.0.1:4000/project/',data) 
     return response
 def get_user_projects():
     all_projects=requests.get('http://127.0.0.1:4000/project')

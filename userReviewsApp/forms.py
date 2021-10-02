@@ -11,7 +11,7 @@ class LoginForm(forms.ModelForm):
     password = forms.CharField(label='Enter password', widget=forms.PasswordInput, required=True)
     class Meta:
         model = User
-        fields = ('email', 'password', )
+        fields = ('email', 'password',)
 
 class SignUpForm(UserCreationForm):
     error_messages = {
@@ -61,7 +61,6 @@ class ProjectsForm(forms.ModelForm):
             'link': forms.TextInput(attrs={'class':'form-control', 'label':'Project Link'}),
             'title': forms.TextInput(attrs={'class':'form-control', 'label':'Project Title'}),
             'description': forms.Textarea(attrs={'class':'form-control', 'label':'Project description'}),
-            'location': forms.TextInput(attrs={'class':'form-control', 'label':'Project Link'}),
             'project_image': forms.FileInput(attrs={'class':'form-control', 'label':'Project Home Page Photo'}),
         }
    
