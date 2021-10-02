@@ -8,7 +8,6 @@ from django.urls import reverse
 from .forms import SignUpForm, ProjectsForm, LoginForm
 from .services import register_user, get_user_projects, create_use_project, login_user
 from django.core.exceptions import BadRequest, ValidationError
-@login_required(login_url='/main/login/')
 def home(request):
     projects= get_user_projects()
     return render(request, 'home.html', {'projects': list(projects) })
@@ -68,8 +67,8 @@ def create_project(request):
                 'description':form.cleaned_data.get('description'),
                 'link':form.cleaned_data.get('link')
             }
-            re = create_use_project(data)
-            print(re)
+            create_use_project(data)
+            return redirect('home')
     else:
         form = ProjectsForm()
     return render(request, 'user_projects/create_project.html', {'form': form})
