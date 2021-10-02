@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-v$rfka_428v8&@&=vwia#-o#rxw+7nfgjqccgm&-_15(@yr4w2
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "https://prorate-app.herokuapp.com",
 ]
 
 
